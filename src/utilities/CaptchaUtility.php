@@ -59,7 +59,7 @@ class CaptchaUtility extends Utility
      *
      * @return string|null The path to the utility SVG icon
      */
-    public static function iconPath()
+    public static function iconPath(): ?string
     {
         return Craft::getAlias("@flowsa/captcha/assetbundles/captchautilityutility/dist/img/CaptchaUtility-icon.svg");
     }

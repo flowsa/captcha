@@ -11,23 +11,24 @@
         "captcha"
     ],
     "support": {
-        "docs": "???",
-        "issues": "???"
+        "docs": "https://github.com/flowsa/captcha",
+        "issues": "https://github.com/flowsa/captcha/issues"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "Flow",
-            "homepage": "www.flowsa.com"
+            "name": "Flow Communications",
+            "homepage": "https://www.flowsa.com"
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0"
+        "craftcms/cms": "^4.0.0-alpha"
     },
     "require-dev": {
-      "craftcms/cms": "^3.2.0",
-      "codeception/codeception": "^3.0",
-      "vlucas/phpdotenv": "^3.0"
+      "craftcms/cms": "^4.0.0-alpha",
+      "codeception/codeception": "^5.1",
+      "vlucas/phpdotenv": "^3.0",
+        "craftcms/rector": "dev-main"
     },
     "autoload": {
         "psr-4": {
@@ -39,11 +40,19 @@
         "handle": "captcha",
         "developer": "Flow",
         "developerUrl": "www.flowsa.com",
-        "documentationUrl": "???",
-        "changelogUrl": "???",
+        "documentationUrl": "https://github.com/flowsa/captcha",
+        "changelogUrl": "https://github.com/flowsa/captcha/blob/master/CHANGELOG.md",
         "components": {
             "captchaService": "flowsa\\captcha\\services\\CaptchaService"
         },
         "class": "flowsa\\captcha\\Captcha"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
     }
 }
