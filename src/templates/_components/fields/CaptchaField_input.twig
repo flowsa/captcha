@@ -1,0 +1,22 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * captcha plugin for Craft CMS 3.x
+ *
+ * CaptchaField Field Input
+ *
+ * @author    Flow
+ * @copyright Copyright (c) 2021 Flow
+ * @link      www.flowsa.com
+ * @package   Captcha
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+        id: name,
+        name: name,
+        value: value})
+}}

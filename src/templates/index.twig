@@ -1,0 +1,46 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * captcha plugin for Craft CMS 3.x
+ *
+ * captcha index.twig
+ *
+ * @author    Flow
+ * @copyright Copyright (c) 2021 Flow
+ * @link      www.flowsa.com
+ * @package   Captcha
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("flowsa\\captcha\\assetbundles\\captcha\\CaptchaAsset") %}
+{% do view.registerAssetBundle("flowsa\\captcha\\assetbundles\\indexcpsection\\IndexCPSectionAsset") %}
+
+{# Link for the ? icon at the bottom of the page #}
+{% set docsUrl = "???" %}
+
+{# The title of this CP section #}
+{% set title = "captcha" %}
+
+{# The URL to this plugin's base CP section #}
+{% set pluginCpUrl = url('captcha') %}
+
+{# Get a URL to an image in our AssetBundle #}
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@flowsa/captcha/assetbundles/indexcpsection/dist', true) ~ '/img/Index-icon.svg' %}
+
+{# Content that should appear in the page header#}
+{% set extraPageHeaderHtml %}
+    <div class="buttons">
+        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('captcha') }}</a>
+    </div>
+{% endset %}
+
+{# The content of the CP Section#}
+{% set content %}
+    <h2>{{ "Index CP Section body goes here"|t('captcha') }}</h2>
+    <img src="{{ iconUrl }}" height="64" width="64" />
+    <p class="textline"></p>
+{% endset %}

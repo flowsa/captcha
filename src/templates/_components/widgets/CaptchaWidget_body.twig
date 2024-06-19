@@ -1,0 +1,20 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * captcha plugin for Craft CMS
+ *
+ * CaptchaWidget Widget Body
+ *
+ * @author    Flow
+ * @copyright Copyright (c) 2021 Flow
+ * @link      www.flowsa.com
+ * @package   Captcha
+ * @since     1.0.0
+ */
+#}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@flowsa/captcha/assetbundles/captchawidgetwidget/dist', true) ~ '/img/CaptchaWidget-icon.svg' %}
+
+<img src="{{ iconUrl }}" height="64" width="64" />
+
+<p>{{ message }}</p>

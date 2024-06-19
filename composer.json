@@ -1,0 +1,49 @@
+{
+    "name": "flowsa/captcha",
+    "description": "Flows Captcha Plugin",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "captcha"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flow",
+            "homepage": "www.flowsa.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "require-dev": {
+      "craftcms/cms": "^3.2.0",
+      "codeception/codeception": "^3.0",
+      "vlucas/phpdotenv": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "flowsa\\captcha\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "captcha",
+        "handle": "captcha",
+        "developer": "Flow",
+        "developerUrl": "www.flowsa.com",
+        "documentationUrl": "???",
+        "changelogUrl": "???",
+        "components": {
+            "captchaService": "flowsa\\captcha\\services\\CaptchaService"
+        },
+        "class": "flowsa\\captcha\\Captcha"
+    }
+}
